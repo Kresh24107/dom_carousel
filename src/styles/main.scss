@@ -1,6 +1,12 @@
+$imageWidth: 130px;
+$imgHeight: 130px;
+$btnWidth: 100px;
+$containerWindow: 3;
+$containerWidth: ($imageWidth * $containerWindow);
+
 body {
   margin: 0 auto;
-  min-width: 1110px;
+  min-width: ($containerWidth + $btnWidth * 2);
 }
 
 .wrap {
@@ -8,19 +14,19 @@ body {
 }
 
 .container {
-  width: 390px;
+  width: $containerWidth;
   overflow: hidden;
   display: flex;
   & > img {
-    width: 130px;
-    height: 130px;
+    width: $imageWidth;
+    height: $imgHeight;
   }
   
 }
 
 button {
   padding: 15px; // castom
-  width: 100px;
+  width: $btnWidth;
   background-color: #fff;
   border: none;
   cursor: pointer;
